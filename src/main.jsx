@@ -8,6 +8,7 @@ import "./index.css";
 import LandingPage from "./pages/LandingPage/LandingPage.jsx";
 import Layout from "./Layout.jsx";
 
+// router variable that stores routing information as specified in react router v6
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,7 +20,8 @@ const router = createBrowserRouter([
         element: <LandingPage />,
       },
       {
-        path: "weather/:lat/:lng",
+        path: "weather/:lat/:lng", // route with parameters to retrieve information on details page
+        // lazy loading to reduce size of main chunk loaded at first
         lazy: async () => {
           let { WeatherDetsPage } = await import("./pages/WeatherDetsPage/WeatherDetsPage.jsx");
           return { Component: WeatherDetsPage };
