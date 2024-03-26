@@ -2,6 +2,8 @@
 
 A weather forecasting app developed for assessing skills using React + Vite.
 
+[Demo](https://weatheria-ruddy.vercel.app/)
+
 ### Libraries used:
 
 - React + Vite
